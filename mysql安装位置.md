@@ -1,0 +1,1 @@
+G:\web\mysql-8.0.11-winx64\share\charsets\

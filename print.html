@@ -1,0 +1,307 @@
+<html>
+
+<head>
+    <style>
+        /* A4 纸张 21.0cm * 29.7 cm */
+        body {
+            display: flex;
+            width: 21cm;
+            height: 29.7cm;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .main {
+            display: flex;
+            width: 18cm;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+        }
+
+        .header {
+            width: 100%;
+            font-size: 14pt;
+            text-align: center;
+            font-weight: 600;
+            padding: 0.5cm;
+        }
+
+        .header-info {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .header-info .info {
+            display: inline-block;
+            width: 33.3%;
+            padding: 0.1cm 0;
+        }
+
+        .header-info .info.checkout-time {
+            width: 66.6%;
+        }
+
+        .main-table {
+            display: flex;
+            border: 1px solid black;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+            margin: 0.2cm 0;
+        }
+
+        .theader,
+        .thbody,
+        .thbody-block {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .theader>div {
+            text-align: center;
+            padding: 0.1cm 0;
+            box-sizing: border-box;
+            border-right: 1px solid black;
+            font-size: 12pt;
+        }
+
+        .theader>div:last-child {
+            border-right: none;
+        }
+
+        .theader,
+        .thbody-block {
+            border-bottom: 1px solid black;
+        }
+
+        .thbody>div {
+            text-align: center;
+            padding: 0.1cm 0;
+            box-sizing: border-box;
+            border-right: 1px solid black;
+            font-size: 12pt;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .thbody>div:last-child {
+            border-right: none;
+        }
+
+        .thbody {
+            border-bottom: 1px solid black;
+        }
+
+        .project {
+            flex: 1;
+        }
+
+        .price {
+            width: 3cm;
+        }
+
+        .num {
+            width: 1cm;
+        }
+
+        .unit {
+            width: 1cm;
+        }
+
+        .total {
+            width: 3cm;
+        }
+
+        .rebate {
+            width: 1cm;
+        }
+
+        .rebate-total {
+            width: 3cm;
+        }
+
+        .thfooter-block {
+            width: 100%;
+        }
+
+        .thfooter {
+            display: flex;
+            width: 100%;
+            border-bottom: 1px solid black;
+        }
+
+        .thfooter>div {
+            border-right: 1px solid black;
+            box-sizing: border-box;
+            padding: 0.1cm;
+        }
+
+        .thfooter>div:last-child {
+            border-right: none;
+        }
+
+        .thfooter .title {
+            width: 13.3%;
+        }
+
+        .thfooter .value {
+            width: 20%;
+        }
+
+        .thfooter.pay-type .title {
+            width: 13.3%;
+        }
+
+        .thfooter.amount-words .title {
+            width: 13.3%;
+        }
+
+        .thfooter.pay-type .value {
+            width: 86%;
+        }
+
+        .thfooter.amount-words .value {
+            width: 86%;
+        }
+
+        .footer {
+            width: 100%;
+            margin-top: 0.5cm;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .bill-staff,
+        .company {
+            display: flex;
+            width: 100%;
+
+        }
+
+        .billing-staff,
+        .website {
+            width: 40%;
+        }
+
+        .checkout-staff,
+        .address {
+            width: 60%;
+        }
+        .customer-service{
+            width: 100%;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="header">广州美莱医疗美容门诊部 收费结账单</div>
+        <div class="header-info">
+            <div class="info">
+                <span class="info-label">客户姓名：</span>
+                <span class="info-value">叶XX</span>
+            </div>
+            <div class="info">
+                <span class="info-label">电话号码：</span>
+                <span class="info-value">138****5654</span>
+            </div>
+            <div class="info">
+                <span class="info-label">生日：</span>
+                <span class="info-value">1999年2月30号</span>
+            </div>
+            <div class="info">
+                <span class="info-label">开单时间：</span>
+                <span class="info-value">2999年2月30号</span>
+            </div>
+            <div class="info checkout-time">
+                <span class="info-label">结账时间：</span>
+                <span class="info-value">2999年2月30号</span>
+            </div>
+        </div>
+        <div class="main-table">
+            <div class="theader">
+                <div class="project">项目</div>
+                <div class="price">单价</div>
+                <div class="num">数量</div>
+                <div class="unit">单位</div>
+                <div class="total">项目金额</div>
+                <div class="rebate">折扣</div>
+                <div class="rebate-total">折后金额</div>
+            </div>
+            <div class="thbody-block">
+                <div class="thbody">
+                    <div class="project">激光8次+报复原味真6次【消炎祛痘、痘印、痘坑加强型（原价）】</div>
+                    <div class="price">16800.0</div>
+                    <div class="num">100</div>
+                    <div class="unit">毫升</div>
+                    <div class="total">16800.0</div>
+                    <div class="rebate">0.9</div>
+                    <div class="rebate-total">1680000.0</div>
+                </div>
+                <div class="thbody">
+                    <div class="project">激光8次+报复原味真6次【消炎祛痘、痘印、痘坑加强型（原价）】</div>
+                    <div class="price">16800.0</div>
+                    <div class="num">100</div>
+                    <div class="unit">毫升</div>
+                    <div class="total">16800.0</div>
+                    <div class="rebate">0.9</div>
+                    <div class="rebate-total">1680000.0</div>
+                </div>
+            </div>
+            <div class="thfooter-block">
+                <div class="thfooter">
+                    <div class="title">项目合计：</div>
+                    <div class="value">1680000.0</div>
+                    <div class="title">应付金额：</div>
+                    <div class="value">1680000.0</div>
+                    <div class="title">实付金额：</div>
+                    <div class="value">1680000.0</div>
+                </div>
+                <div class="thfooter pay-type">
+                    <div class="title">结账方式：</div>
+                    <div class="value">（微信） 2130000.0</div>
+                </div>
+                <div class="thfooter amount-words">
+                    <div class="title">金额大写：</div>
+                    <div class="value">（大写）壹佰万贰万壹仟叁佰元整￥1680000.0</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="bill-staff">
+                <div class="billing-staff">
+                    <span class="title">&#12288;开单人：</span>
+                    <span class="value">thtemp</span>
+                </div>
+                <div class="checkout-staff">
+                    <span class="title">&#12288;结账人：</span>
+                    <span class="value">thtemp</span>
+                </div>
+            </div>
+            <div class="company">
+                <div class="website">
+                    <span class="title">公司网址：</span>
+                    <span class="value">thtemp</span>
+                </div>
+                <div class="address">
+                    <span class="title">公司地址：</span>
+                    <span class="value">广州市天河区林和西芦恒路222号广州市天河区林和西芦恒路222号广州市天河区林和西芦恒路222号</span>
+                </div>
+            </div>
+            <div class="customer-service">
+                <div class="service-phone">
+                    <span class="title">客服电话：</span>
+                    <span class="value">020-3320140</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

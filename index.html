@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <style>
+        #app {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box{
+            display: flex;
+            width: 100px;
+            /* transition: all 1s ease; */
+            /* height: 50px; */
+        }
+        .box.hide{
+            /* height: 0; */
+            overflow-y: hidden;
+        }
+       
+        #dragBox{
+            width: 100px;
+            height: 100px;
+            box-sizing: border-box;
+            border: 2px solid blueviolet;
+        }
+
+        @keyframes hideSmooth {
+            from {
+                transform: scaleY(100%);
+            }
+            to{
+                transform: scaleY(0);
+                height: 0;
+                overflow-y: hidden;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id='dragBox' ondrag="ondrag">
+        拖我
+    </div>
+</body>
+<script>
+function ondrag(...e){
+    console.log(e)
+}
+</script>
+
+</html>
