@@ -59,6 +59,14 @@ Function.prototype.myBind = function () {
   };
 };
 
+Function.prototype.newBind = function () {
+  const self = this;
+  let [context, ...args] = arguments;
+  return function () {
+    self.apply(context, args);
+  };
+};
+
 // let obj = {
 //   name: 'lrz'
 // }
@@ -92,8 +100,7 @@ function myNew2() {
   return typeof res === "object" ? res : obj;
 }
 
-function newObj(){
-
+function newObj() {
   const Con = [].shift.call(arguments);
   const obj = Object.create(Con.prototype);
   const res = Con.apply(obj, arguments);
