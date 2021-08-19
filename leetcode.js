@@ -91,3 +91,12 @@ function myNew2() {
 
   return typeof res === "object" ? res : obj;
 }
+
+function newObj(){
+
+  const Con = [].shift.call(arguments);
+  const obj = Object.create(Con.prototype);
+  const res = Con.apply(obj, arguments);
+
+  return typeof res === "object" ? res : obj;
+}
